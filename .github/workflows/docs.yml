@@ -24,7 +24,6 @@ jobs:
         run: |
           rm -rf lean-toolchain
           rm -rf lake-manifest.json
-        working-directory: docbuild
 
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -34,16 +33,14 @@ jobs:
           set -o pipefail
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- --default-toolchain none -y
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-        working-directory: docbuild
 
       - name: set toolchain
         run: |
           curl -L https://raw.githubusercontent.com/leanprover/doc-gen4/refs/heads/main/lean-toolchain | tee lean-toolchain
-        working-directory: docbuild
 
       - name: build doc-gen4
         run: |
-          lake build doc-gen4
+          MATHLIB_NO_CACHE_ON_UPDATE=1 lake update doc-gen4
         working-directory: docbuild
 
       - name: generate docs
