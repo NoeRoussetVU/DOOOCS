@@ -1,0 +1,18 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs": null,
+ "log":
+ [{"message": "Documentation indexing", "level": "info"},
+  {"message":
+   ".> /home/vboxuser/Downloads/DOOOCS/.lake/packages/doc-gen4/.lake/build/bin/doc-gen4 index --build /home/vboxuser/Downloads/DOOOCS/docbuild/.lake/build",
+   "level": "trace"}],
+ "inputs":
+ [["/home/vboxuser/Downloads/DOOOCS/.lake/packages/doc-gen4/.lake/build/bin/doc-gen4",
+   "56844901d7e913e0"],
+  ["<nil>", "aca70617c477d636"],
+  ["<collection>",
+   [["/home/vboxuser/Downloads/DOOOCS/docbuild/.lake/build/doc/DOOOCS/Basic.html",
+     "ea3ec7f67175e1d7"],
+    ["/home/vboxuser/Downloads/DOOOCS/docbuild/.lake/build/doc/DOOOCS.html",
+     "51c86b54b4774b71"]]]],
+ "depHash": "72b17d96242323f7"}
